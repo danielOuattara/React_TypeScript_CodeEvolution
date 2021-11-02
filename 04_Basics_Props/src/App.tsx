@@ -10,8 +10,7 @@ function App() {
     lastName: "Ouattara",
   };
 
-  const hobbies = ["swimming", "flying", "painting", "riding"]
-
+  const hobbies = ["swimming", "flying", "painting", "riding"];
 
   const personalitiesList = [
     {
@@ -29,16 +28,16 @@ function App() {
       firstName: "Fidele",
       lastName: "Castro",
     },
-  ]
+  ];
 
   return (
     <div className="App">
       <Greet name='Daniel' messageCount={10} isLoggedIn={false} />
-      {/* <Greet name={10} /> */}
 
       <hr />
       <Person person={person} hobbies={hobbies}/>
 
+      <hr />
       <HobbiesList hobbies={hobbies} />
 
       <hr />
