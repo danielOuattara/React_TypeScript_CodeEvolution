@@ -1,10 +1,22 @@
 
-export const Status = () => {
+type StatusProps = {
+    status: 'loading' | 'success' | 'erorr',
+}
+
+export const Status = (props: StatusProps) => {
+    const status = props.status;
+    let message;
+
+    if(status === 'loading') {
+        message = '...loading';
+    } else if (status ==="success"){
+        message = "success";
+    } else {
+        message = "Error fetching data"
+    }
     return (
         <div>
-            <h2>...loading</h2>
-            <h2>Data fetched successfully</h2>
-            <h2>Error Fetching Data</h2>
+            <h2>{message}</h2>
         </div>
     )
 }

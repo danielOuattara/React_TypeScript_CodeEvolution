@@ -1,56 +1,28 @@
 import './App.css';
-import { Greet } from './components/Greet';
-import { Person } from './components/Person';
-import { PersonalitiesList } from './components/PersonalitiesList';
-import { HobbiesList } from './components/HobbiesList';
 import { Status } from './components/Status';
+import { Heading } from './components/Heading';
+import { Daniel } from './components/Daniel'
+import { Greet } from './components/Greet';
+
 
 function App() {
 
-  const person = {
-    firstName: "Daniel",
-    lastName: "Ouattara",
-  };
-
-  const hobbies = ["swimming", "flying", "painting", "riding"]
-
-
-  const personalitiesList = [
-    {
-      id: 1,
-      firstName: "Nelson",
-      lastName: "Mandela",
-    },
-    {
-      id: 2,
-      firstName: "Thomas",
-      lastName: "Sankara",
-    },
-    {
-      id: 3,
-      firstName: "Fidele",
-      lastName: "Castro",
-    },
-  ]
-
   return (
     <div className="App">
-      <Greet name='Daniel' messageCount={10} isLoggedIn={false} />
-      {/* <Greet name={10} /> */}
+      <Status status="loading" />
 
       <hr />
-      <Person person={person} hobbies={hobbies}/>
+      <Heading > Hello React TypeScript </Heading>
 
-      <HobbiesList hobbies={hobbies} />
+      <Daniel> 
+        <Heading> The next Generation of Web Developper</Heading>
+      </Daniel>
 
-      <hr />
-      <PersonalitiesList names={personalitiesList} />
-
-      <hr />
-      <Status/>
-
+      <hr />      
+      <Greet name="John Doe" isLoggedIn={false} />
 
     </div>
+
   );
 }
 

@@ -1,7 +1,7 @@
 
 type GreetProps = {
     name: string,
-    messageCount: number,
+    messageCount ?: number, // ? -> optionnal props
     isLoggedIn: false,
 };
 
@@ -12,11 +12,12 @@ interface: for libraries
  */
 
 export const Greet = (props: GreetProps) => {
+    const { name, messageCount, isLoggedIn} = props
     return (
         <div>
-            <h2>Welcome to React TypeScript, {props.name}</h2>            
-            <h2> {props.messageCount} messages pending</h2>  
-            {props.isLoggedIn ? <p>Use is logged in</p> : <p>Use is disconnected</p> }
+            <h2>Welcome to React TypeScript, {name}</h2>            
+            <h2> {messageCount} messages pending</h2>  
+            {isLoggedIn ? <p>User is logged in</p> : <p>User is disconnected</p> }
         </div>
     )
 }
