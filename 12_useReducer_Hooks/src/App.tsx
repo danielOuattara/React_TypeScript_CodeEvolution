@@ -9,8 +9,6 @@ function App() {
     border: "2px solid grey", 
     padding: '2rem', 
     margin: '2rem',
-    color: "blue",
-    fontSize: "2em"
   }
 
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Container } from './components/Container';
+import { LoggedIn } from './components/state/LoggedIn';
 
 
 function App() {
@@ -9,14 +10,15 @@ function App() {
     border: "2px solid grey", 
     padding: '2rem', 
     margin: '2rem',
-    color: "blue",
-    fontSize: "2em"
   }
 
   return (
     <div className="App">
       <Container styles={{ border: "2px solid grey", padding: '2rem', margin: '2rem' }}/>
       <Container styles={styles}/>
+      
+      <hr />
+      <LoggedIn />
     </div>
 
   );

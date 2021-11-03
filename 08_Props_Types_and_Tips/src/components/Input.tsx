@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 type InputProps = {
     value: string,
@@ -6,7 +6,7 @@ type InputProps = {
 }
 
  
-export const Input = (props: InputProps) => {
+export const Input = ({value, handleChange}: InputProps) => {
     
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log(event);
@@ -15,8 +15,8 @@ export const Input = (props: InputProps) => {
         <>
             <input
                 type="text"
-                value={props.value}
-                onChange={props.handleChange}
+                value={value}
+                onChange={handleChange}
             />
             <br />
             <input
