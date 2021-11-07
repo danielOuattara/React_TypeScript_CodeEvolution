@@ -1,5 +1,4 @@
 
-
 type PersonnalitiesListProps = {
     names: {
         id: number,
@@ -9,7 +8,9 @@ type PersonnalitiesListProps = {
 };
 
 export const PersonalitiesList = (props: PersonnalitiesListProps) => {
-    const names = props.names
+
+    const names = props.names;
+    
     return (
         <div>
             {names.map((name) => {

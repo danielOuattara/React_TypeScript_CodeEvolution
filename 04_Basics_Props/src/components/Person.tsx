@@ -5,12 +5,14 @@ type PersonProps = {
         firstName: string,
         lastName: string,
     },
-    hobbies: string[],
+    hobbies: string [],
 };
 
 export const Person = (props: PersonProps) => {
+
     const { firstName, lastName } = props.person;
     const hobbies = props.hobbies;
+    
     return (
         <div>
             <h2> {firstName} {lastName}</h2>

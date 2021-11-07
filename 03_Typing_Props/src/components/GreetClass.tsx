@@ -5,7 +5,7 @@ type GreetClassProps = {
     name: string
 }
 
-export default class Greet extends Component<GreetClassProps> {
+export default class Greet extends Component <GreetClassProps> {
     constructor(props: GreetClassProps) {
         super(props)
         this.state = {}

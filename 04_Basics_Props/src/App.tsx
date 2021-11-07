@@ -3,6 +3,8 @@ import { Greet } from './components/Greet';
 import { Person } from './components/Person';
 import { PersonalitiesList } from './components/PersonalitiesList';
 import { HobbiesList } from './components/HobbiesList';
+
+
 function App() {
 
   const person = {
@@ -42,7 +44,6 @@ function App() {
 
       <hr />
       <PersonalitiesList names={personalitiesList} />
-
 
     </div>
   );
