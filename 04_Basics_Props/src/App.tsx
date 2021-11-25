@@ -7,7 +7,7 @@ import { HobbiesList } from './components/HobbiesList';
 
 function App() {
 
-  const person = {
+  const person = {  // obj to be passed as prop.
     firstName: "Daniel",
     lastName: "Ouattara",
   };
@@ -15,21 +15,9 @@ function App() {
   const hobbies = ["swimming", "flying", "painting", "riding"];
 
   const personalitiesList = [
-    {
-      id: 1,
-      firstName: "Nelson",
-      lastName: "Mandela",
-    },
-    {
-      id: 2,
-      firstName: "Thomas",
-      lastName: "Sankara",
-    },
-    {
-      id: 3,
-      firstName: "Fidele",
-      lastName: "Castro",
-    },
+    { id: 1, firstName: "Nelson", lastName: "Mandela",},
+    { id: 2, firstName: "Thomas", lastName: "Sankara",},
+    { id: 3, firstName: "Fidele", lastName: "Castro", },
   ];
 
   return (

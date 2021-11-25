@@ -12,7 +12,9 @@ function App() {
       <Status status="loading" />
 
       <hr />
-      <Heading > Hello React TypeScript </Heading>
+      <Heading > 
+        <p>This is a paragraph</p>
+      </Heading>
 
       <Daniel> 
         <Heading> The next Generation of Web Developper</Heading>

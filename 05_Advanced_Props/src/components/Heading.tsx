@@ -1,5 +1,5 @@
 type HeadingProps = {
-    children: string
+    children: string | JSX.Element
 }
 
 export const Heading = (props: HeadingProps ) => {

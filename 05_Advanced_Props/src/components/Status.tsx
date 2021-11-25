@@ -1,6 +1,6 @@
 
 type StatusProps = {
-    status: 'loading' | 'success' | 'erorr',
+    status: 'loading' | 'success' | 'erorr',  // only strings among -->  'loading' | 'success' | 'erorr
 }
 
 export const Status = (props: StatusProps) => {
@@ -12,11 +12,11 @@ export const Status = (props: StatusProps) => {
     } else if (status ==="success"){
         message = "success";
     } else {
-        message = "Error fetching data"
+        message = "Error fetching data";
     }
     return (
         <div>
             <h2>{message}</h2>
         </div>
-    )
+    );
 }

@@ -1,5 +1,4 @@
 
-
 type HobbiesListProps = {
     hobbies: string[],
 };
@@ -8,9 +7,8 @@ export const HobbiesList = (props: HobbiesListProps) => {
     const hobbies = props.hobbies;
     return (
         <ul>
-            {hobbies.map((hobby) => {
-                return <li key={hobby}> {hobby} </li>
-            })}
+            <h2>Hobbies list</h2>
+            {hobbies.map((hobby) => <li key={hobby}> {hobby} </li>)}
         </ul>
-    )
+    );
 }

@@ -2,7 +2,7 @@
 import { Component } from 'react';
 
 type GreetClassProps = {
-    name: string
+    name: string,
 }
 
 export default class Greet extends Component <GreetClassProps> {
@@ -20,7 +20,7 @@ export default class Greet extends Component <GreetClassProps> {
     }
 }
 
-/* Typescript and React Class (stateful) component need more in deepth 
+/* Typescript and React Class (stateful) component need more in deepth !!!
 
 link 1 : https://github.com/Microsoft/TypeScript-React-Starter#typescript-react-starter
 

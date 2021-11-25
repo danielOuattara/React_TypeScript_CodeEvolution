@@ -13,6 +13,6 @@ export const Greet = (props: GreetProps) => {
         <div>
             <h2>Welcome to React TypeScript, {props.name}</h2>            
         </div>
-    )
+    );
 }
 
