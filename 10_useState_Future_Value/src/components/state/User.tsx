@@ -6,16 +6,14 @@ type AuthUser = {
 }
 
 export const User = () => {
-    const [user, setUser] = useState<AuthUser | null>(null)
-
+    const [user, setUser] = useState<AuthUser | null>(null);
     const handleLogin = () => {
         setUser({
             name: 'Daniel',
-            email: 'daniel@mail.com'
-        })
+            email: 'daniel@mail.com',
+        });
     }
-
-    const handleLogout = () => setUser(null)
+    const handleLogout = () => setUser(null);
 
     return (
         <div>

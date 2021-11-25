@@ -5,7 +5,7 @@ interface ==> for libraries
  */
 
 type GreetProps = {
-    name: string
+    name: string,
 };
 
 export const Greet = (props: GreetProps) => {
