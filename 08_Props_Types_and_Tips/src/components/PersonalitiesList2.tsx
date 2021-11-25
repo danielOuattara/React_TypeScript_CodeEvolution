@@ -4,7 +4,7 @@ type PersonnalitiesListProps = {
     names: Name[],
 };
 
-export const PersonalitiesList = (props: PersonnalitiesListProps) => {
+export const PersonalitiesList2 = (props: PersonnalitiesListProps) => {
     const names = props.names
     return (
         <div>

@@ -1,5 +1,4 @@
 
-
 export type PersonProps = {
     person: {
         firstName: string,

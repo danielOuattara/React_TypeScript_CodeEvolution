@@ -1,5 +1,5 @@
  
-import { PersonProps } from './../propsTypes/PersonProps.tsx'
+import { PersonProps } from './../propsTypes/PersonProps'
 
 
 export const Person = (props: PersonProps) => {

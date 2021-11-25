@@ -1,12 +1,10 @@
-import React from "react"
 
-type InputProps = {
-    value: string,
-    handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+type Props = {
+    value?: string,
+    handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
- 
-export const Input = ({value, handleChange}: InputProps) => {
+export const Input = ({value, handleChange}: Props) => {
     
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log(event);
@@ -21,7 +19,7 @@ export const Input = ({value, handleChange}: InputProps) => {
             <br />
             <input
                 type="text"
-                value={props.value}
+                value={value}
                 onChange={handleInputChange}
             />
             
