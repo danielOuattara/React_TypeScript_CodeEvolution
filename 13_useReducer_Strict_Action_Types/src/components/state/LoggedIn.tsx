@@ -1,26 +1,23 @@
-import { useState } from 'react';
-
+import { useState } from "react";
 
 export const LoggedIn = () => {
-    
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
-    
-    const handleLogin = () => {
-        setIsLoggedIn(true)
-    }
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    const handleLogout = () => {
-        setIsLoggedIn(false)
-    }
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
 
-    return (
-        <div>
-            <h2> User is {isLoggedIn ? 'logged in' : 'logged out'}</h2>
-            <button onClick={handleLogin}>Login</button>
-            <button onClick={handleLogout}>Logout</button>
-            
-        </div>
-    )
-}
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
+  return (
+    <div>
+      <h2> User is {isLoggedIn ? "logged in" : "logged out"}</h2>
+      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogout}>Logout</button>
+    </div>
+  );
+};
 
 // export default LoggedIn;
