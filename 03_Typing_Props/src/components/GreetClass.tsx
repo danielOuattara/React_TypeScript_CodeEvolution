@@ -1,23 +1,41 @@
-
-import { Component } from 'react';
+import { Component } from "react";
 
 type GreetClassProps = {
-    name: string,
-}
+  name: string;
+};
 
-export default class Greet extends Component <GreetClassProps> {
-    constructor(props: GreetClassProps) {
-        super(props)
-        this.state = {}
-    }
-    
-    render() {
-        return (
-            <div>
-                <h1>Hello {this.props.name} </h1>
-            </div>
-        )
-    }
+// export default class Greet extends Component <GreetClassProps> {
+//     constructor(props: GreetClassProps) {
+//         super(props)
+//         this.state = {}
+//     }
+
+//     render() {
+//         return (
+//             <div>
+//                 <h1>Hello {this.props.name} </h1>
+//             </div>
+//         )
+//     }
+// }
+
+//------------------------------------------------------------------
+
+// Desctructured props
+
+export default class Greet extends Component<GreetClassProps> {
+  constructor({ name }: GreetClassProps) {
+    super({ name });
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello {this.props.name} </h1>
+      </div>
+    );
+  }
 }
 
 /* Typescript and React Class (stateful) component need more in deepth !!!
