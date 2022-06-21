@@ -20,26 +20,37 @@ function App() {
   return (
     <div className="App">
       
-     1<button onClick={() => console.log('Simple Button')}>Simple Button</button>  <br /><br />
+     1 <button onClick={() => console.log('Simple Button')}>Simple Button</button><br /><br />
 
       <hr />
       
-      2 <ButtonComponent onClick={() => console.log('Hello React')} />  
+      2 <ButtonComponent onClick={() => console.log('Hello React')} /> 
+
+      <hr />
+
       3 <ButtonComponent handleClick={handleClick} /> 
 
       <hr />
   
       4 <ButtonComponent handleClickEvent={handleClickEvent} />  
-      5 <ButtonComponent handleClickEvent={(event) => console.log('Button Event',event)} /> 
+
+      <hr />
+
+      5 <ButtonComponent handleClickEvent={(event) => console.log('Button Event', event)} /> 
 
       <hr />
 
       6 <ButtonComponent handleClickEventId={handleClickEventId} />
+
+      <hr />
+
       <ButtonComponent handleClickEventId={(event, id) => {
           console.log('btn clicked! ',event, id)}}
-      /> 
+      />
 
-      7 <Input value='' handleChange={(event) => console.log(event)} /> 
+      <hr />
+      
+      7 <Input value="" handleChange={(event) => console.log(event)} /> 
 
     </div>
 
