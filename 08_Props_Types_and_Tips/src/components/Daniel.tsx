@@ -1,8 +1,7 @@
-
 type DanielProps = {
-    children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export const Daniel = (props: DanielProps) => {
-    return <h2>{props.children}</h2>
-}
+  return <h2>{props.children}</h2>;
+};
