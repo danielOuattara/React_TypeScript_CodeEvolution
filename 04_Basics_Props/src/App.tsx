@@ -1,11 +1,16 @@
 import "./App.css";
 import { Greet } from "./components/Greet";
-import GreetClass from "./components/GreetClass";
+import { GreetClass, GreetClass2 } from "./components/GreetClass";
 import { Person } from "./components/Person";
 import { PersonalitiesList } from "./components/PersonalitiesList";
 import { HobbiesList } from "./components/HobbiesList";
+import {
+  HobbiesListClass,
+  HobbiesListClass2,
+} from "./components/HobbiesListClass";
 function App() {
-  const person = {// obj to be passed as prop.
+  const person = {
+    // obj to be passed as prop.
     firstName: "Daniel",
     lastName: "Ouattara",
   };
@@ -24,12 +29,15 @@ function App() {
 
       <hr />
       <GreetClass name="Julie" messageCount={10} isLoggedIn={true} />
+      <GreetClass2 name="Daniel" messageCount={9} isLoggedIn={false} />
 
       <hr />
       <Person person={person} hobbies={hobbies} />
 
       <hr />
       <HobbiesList hobbies={hobbies} />
+      <HobbiesListClass hobbies={hobbies} />
+      <HobbiesListClass2 hobbies={hobbies} />
 
       <hr />
       <PersonalitiesList names={personalitiesList} />

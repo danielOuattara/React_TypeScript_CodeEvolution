@@ -7,17 +7,16 @@ type PersonProps = {
 };
 
 export const Person = (props: PersonProps) => {
-  const { firstName, lastName } = props.person;
-  const hobbies = props.hobbies;
   const [one, two, three] = props.hobbies;
+
   return (
     <div>
       <h2>
-        {firstName} {lastName}
+        {props.person.firstName} {props.person.lastName}
       </h2>
       <br />
       <ul>
-        {hobbies.map((hobby) => (
+        {props.hobbies.map((hobby) => (
           <li key={hobby}> {hobby} </li>
         ))}
       </ul>
