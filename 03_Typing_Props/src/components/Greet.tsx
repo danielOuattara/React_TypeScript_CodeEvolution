@@ -1,23 +1,27 @@
 /* 
 type ==> for applications
 interface ==> for libraries
- */
+*/
 
-type GreetProps = {
+//--------------------------------------------------------------------
+type GreetPropsType = {
   name: string | number;
 };
 
-// export const Greet = (props: GreetProps) => {
-//   return (
-//     <div>
-//       <h2>Welcome to React TypeScript, {props.name}</h2>
-//     </div>
-//   );
-// };
+export const Greet = (props: GreetPropsType) => {
+  return (
+    <div>
+      <h2>Welcome to React TypeScript, {props.name}</h2>
+    </div>
+  );
+};
 
 //---------------------------------------------------------------------
 
-export const Greet = ({name}: GreetProps) => {
+interface GreetPropsInterface {
+  name: string | number;
+}
+export const Greet2 = ({ name }: GreetPropsInterface) => {
   return (
     <div>
       <h2>Welcome to React TypeScript, {name}</h2>
