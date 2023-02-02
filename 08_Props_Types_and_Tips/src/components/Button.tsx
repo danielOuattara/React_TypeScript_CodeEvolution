@@ -5,7 +5,7 @@ type ButtonProps = {
   handleClickEvent?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   handleClickEventId?: (
     event: React.MouseEvent<HTMLButtonElement>,
-    id: number
+    id: number,
   ) => void;
 };
 
