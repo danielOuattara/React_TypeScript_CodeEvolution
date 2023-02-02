@@ -1,5 +1,5 @@
 type CSSProps = {
-  styles?: React.CSSProperties;
+  styles: React.CSSProperties;
 };
 
 export const Container = (props: CSSProps) => {
