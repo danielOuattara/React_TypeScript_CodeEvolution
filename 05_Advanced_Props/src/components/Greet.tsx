@@ -10,7 +10,7 @@ type GreetProps = {
 };
 
 export const Greet = (props: GreetProps) => {
-  const { name, messageCount, isLoggedIn } = props;
+  const { name, messageCount = 0, isLoggedIn } = props;
   return (
     <div>
       <h2>Welcome to React TypeScript, {name}</h2>
