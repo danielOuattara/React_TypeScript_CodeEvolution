@@ -1,19 +1,29 @@
-
 type ButtonProps = {
-    onClick?: () => void,
-    handleClick?: () => void,
-    handleClickEvent?: (event: React.MouseEvent<HTMLButtonElement>) => void,
-    handleClickEventId?: (event: React.MouseEvent<HTMLButtonElement>, id: number) => void,
-}
+  onClick?: () => void;
+  handleClick?: () => void;
+  handleClickEvent?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  handleClickEventId?: (
+    event: React.MouseEvent<HTMLButtonElement>,
+    id: number,
+  ) => void;
+};
 
 export const ButtonComponent = (props: ButtonProps) => {
-    return (
-        <>
-            <button onClick={props.onClick}>Hello React</button> <br /><br />
-            <button onClick={props.handleClick}> handleClick TypeScript</button> <br /><br />
-            <button onClick={props.handleClickEvent}> Click Event</button> <br /><br />
-            <button onClick={(event) => props.handleClickEventId!(event, 1)}> Click Event + Id</button> <br /> <br /> 
-            <br />
-        </>
-    );
-}
+  //   console.log(props.handleClick?.toString());
+  return (
+    <>
+      <button onClick={props.onClick}>Hello React</button> <br />
+      <br />
+      <button onClick={props.handleClick}> hello TypeScript</button> <br />
+      <br />
+      <button onClick={props.handleClickEvent}> Click Event</button> <br />
+      <br />
+      <button onClick={(event) => props.handleClickEventId!(event, 1)}>
+        {" "}
+        Click Event + Id
+      </button>{" "}
+      <br /> <br />
+      <br />
+    </>
+  );
+};

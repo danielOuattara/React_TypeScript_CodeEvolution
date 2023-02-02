@@ -1,59 +1,63 @@
-import React from 'react';
-import './App.css';
-import { ButtonComponent } from './components/ButtonComponent';
-import { Input } from './components/Input';
-
+import React from "react";
+import "./App.css";
+import { ButtonComponent } from "./components/ButtonComponent";
+import { Input } from "./components/Input";
 
 function App() {
-
   const handleClick = () => console.log("Hello TypeScript");
 
   const handleClickEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
     console.log(event);
-  }
+  };
 
-  const handleClickEventId = (event: React.MouseEvent<HTMLButtonElement>, id:number) => {
-    console.log(event)
-    console.log(id)
-  }
+  const handleClickEventId = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    id: number,
+  ) => {
+    console.log(event);
+    console.log(id);
+  };
 
   return (
     <div className="App">
-      
-     1 <button onClick={() => console.log('Simple Button')}>Simple Button</button><br /><br />
-
+      {/* ----------------------------------------------------- */}
+      <h2>1</h2>
+      <button onClick={() => console.log("Simple Button")}>
+        Simple Button
+      </button>
+      <br />
       <hr />
-      
-      2 <ButtonComponent onClick={() => console.log('Hello React')} /> 
-
+      {/* ----------------------------------------------------- */}
+      <h2>2</h2>
+      <ButtonComponent onClick={() => console.log("Hello React")} />
       <hr />
-
-      3 <ButtonComponent handleClick={handleClick} /> 
-
+      {/* ----------------------------------------------------- */}
+      <h2>3</h2> <ButtonComponent handleClick={handleClick} />
       <hr />
-  
-      4 <ButtonComponent handleClickEvent={handleClickEvent} />  
-
+      {/* ----------------------------------------------------- */}
+      <h2>4</h2> <ButtonComponent handleClickEvent={handleClickEvent} />
       <hr />
-
-      5 <ButtonComponent handleClickEvent={(event) => console.log('Button Event', event)} /> 
-
-      <hr />
-
-      6 <ButtonComponent handleClickEventId={handleClickEventId} />
-
-      <hr />
-
-      <ButtonComponent handleClickEventId={(event, id) => {
-          console.log('btn clicked! ',event, id)}}
+      {/* ----------------------------------------------------- */}
+      <h2>5</h2>
+      <ButtonComponent
+        handleClickEvent={(event) => console.log("Button Event", event)}
       />
-
       <hr />
-      
-      7 <Input value="" handleChange={(event) => console.log(event)} /> 
-
+      {/* ----------------------------------------------------- */}
+      <h2>6</h2>
+      <ButtonComponent
+        handleClickEventId={(event, id) => {
+          console.log("btn clicked! ", event, id);
+        }}
+      />
+      <ButtonComponent handleClickEventId={handleClickEventId} />
+      <hr />
+      {/* ----------------------------------------------------- */}
+      <h2>7</h2> <Input value="" handleChange={(event) => console.log(event)} />
+      <br />
+      <br />
+      {/* ----------------------------------------------------- */}
     </div>
-
   );
 }
 
