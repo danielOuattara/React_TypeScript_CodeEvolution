@@ -21,8 +21,8 @@ export const User = () => {
 
   return (
     <div>
-      <h2> User name is {user?.name}</h2>
-      <h2> User email is {user?.email} </h2>
+      <h2> User name is {user.name}</h2>
+      <h2> User email is {user.email} </h2>
       <button onClick={handleLogin}>Login</button>
       <button onClick={handleLogout}>Logout</button>
     </div>
