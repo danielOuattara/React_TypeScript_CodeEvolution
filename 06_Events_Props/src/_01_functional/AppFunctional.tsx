@@ -1,13 +1,11 @@
 import React from "react";
-import "./App.css";
+import "./../App.css";
 import { ButtonComponent } from "./components/ButtonComponent";
 import { Input } from "./components/Input";
 
-function App() {
-  const handleClick = () => console.log("Hello TypeScript");
-
+export default function AppFunctional() {
   const handleClickEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(event);
+    console.log("Button Event", event);
   };
 
   const handleClickEventId = (
@@ -32,7 +30,8 @@ function App() {
       <ButtonComponent onClick={() => console.log("Hello React")} />
       <hr />
       {/* ----------------------------------------------------- */}
-      <h2>3</h2> <ButtonComponent handleClick={handleClick} />
+      <h2>3</h2>{" "}
+      <ButtonComponent handleClick={() => console.log("Hello TypeScript")} />
       <hr />
       {/* ----------------------------------------------------- */}
       <h2>4</h2> <ButtonComponent handleClickEvent={handleClickEvent} />
@@ -54,11 +53,7 @@ function App() {
       <hr />
       {/* ----------------------------------------------------- */}
       <h2>7</h2> <Input value="" handleChange={(event) => console.log(event)} />
-      <br />
-      <br />
       {/* ----------------------------------------------------- */}
     </div>
   );
 }
-
-export default App;
