@@ -1,8 +1,7 @@
-import React from "react";
-import "./App.css";
+import "./../App.css";
 import { Container } from "./components/Container";
 
-function App() {
+function AppFunctional() {
   const style_container = {
     border: "2px solid grey",
     padding: "2rem",
@@ -14,6 +13,7 @@ function App() {
 
   return (
     <div className="App">
+      <h2>Functional Component</h2>
       <Container
         styles={{ border: "5px solid green", padding: "2rem", margin: "2rem" }}
       />
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppFunctional;
