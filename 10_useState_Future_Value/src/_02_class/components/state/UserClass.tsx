@@ -1,46 +1,57 @@
 import { Component } from "react";
 
-interface AuthUser {
-  name: string;
-  email: string;
-}
+// interface AuthUser {
+//   user: {
+//     name: string;
+//     email: string;
+//   };
+// }
+
+//------------------------ OR
+
 // type AuthUser = {
 //   name: string;
 //   email: string;
 // };
 
-export class UserClass extends Component<AuthUser | null> {
-  constructor(props: AuthUser | null) {
-    super(props);
-
-    /* TODO: complete satte type declaration and comment out below for testing */
-    this.state = {
-      user: {
-        name: null,
-        email: null,
-      },
-    };
-  }
+export class UserClass extends Component {
+  state = {
+    user: {
+      name: null,
+      email: null,
+    },
+  };
 
   handleLogin = () => {
     this.setState((prevState: {}) => ({
       ...prevState,
-      name: "Daniel",
-      email: "daniel@mail.com",
+      user: {
+        name: "Daniel",
+        email: "danil@mail.com",
+      },
     }));
   };
-  handleLogout = () => this.setState(() => null);
+  handleLogout = () =>
+    this.setState(() => ({
+      user: {
+        name: null,
+        email: null,
+      },
+    }));
 
   render() {
+    console.log(this.state);
     return (
       <div>
-        {/* <h2> User name: {this.state.user?.name}</h2>
+        <p>Hello</p>
+        <h2> User name: {this.state.user?.name}</h2>
         <h2> User email: {this.state.user?.email} </h2>
 
         {this.state.user?.name && <h2> User name: {this.state.user?.name}</h2>}
+
         {this.state.user?.email && (
           <h2> User email: {this.state.user?.email}</h2>
-        )} */}
+        )}
 
         <button onClick={this.handleLogin}>Login</button>
         <button onClick={this.handleLogout}>Logout</button>
@@ -48,5 +59,3 @@ export class UserClass extends Component<AuthUser | null> {
     );
   }
 }
-
-// export default LoggedIn;
