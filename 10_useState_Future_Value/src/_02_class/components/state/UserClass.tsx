@@ -1,11 +1,9 @@
 import { Component } from "react";
 
-// interface AuthUser {
-//   user: {
-//     name: string;
-//     email: string;
-//   };
-// }
+interface AuthUser {
+  name: string;
+  email: string;
+}
 
 //------------------------ OR
 
