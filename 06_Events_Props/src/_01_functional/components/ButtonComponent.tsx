@@ -8,7 +8,7 @@ type ButtonProps = {
   ) => void;
 };
 
-export const ButtonComponent = (props: ButtonProps) => {
+export default function ButtonComponent(props: ButtonProps) {
   return (
     <>
       {props.onClick && <button onClick={props.onClick}>Hello React</button>}
@@ -36,4 +36,4 @@ export const ButtonComponent = (props: ButtonProps) => {
       <br />
     </>
   );
-};
+}

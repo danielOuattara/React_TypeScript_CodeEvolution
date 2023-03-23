@@ -4,6 +4,7 @@ import ButtonComponent from "./components/ButtonComponent";
 import Input from "./components/Input";
 
 export default class AppClass extends Component {
+  //
   handleClickEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
     console.log("Button Event", event);
   };

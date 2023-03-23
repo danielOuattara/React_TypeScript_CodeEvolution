@@ -1,7 +1,7 @@
 import React from "react";
 import "./../App.css";
-import { ButtonComponent } from "./components/ButtonComponent";
-import { Input } from "./components/Input";
+import ButtonComponent from "./components/ButtonComponent";
+import Input from "./components/Input";
 
 export default function AppFunctional() {
   const handleClickEvent = (event: React.MouseEvent<HTMLButtonElement>) => {
