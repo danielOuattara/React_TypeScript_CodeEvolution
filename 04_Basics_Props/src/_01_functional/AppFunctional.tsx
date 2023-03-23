@@ -29,7 +29,7 @@ function App() {
       <br />
       <HobbiesList hobbies={hobbies} />
       <br />
-      <PersonalitiesList names={personalitiesList} />
+      <PersonalitiesList personalities={personalitiesList} />
     </div>
   );
 }

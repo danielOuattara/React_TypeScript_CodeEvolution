@@ -1,3 +1,5 @@
+import { Component } from "react";
+
 type PersonalitiesListProps = {
   names: {
     id: number;
@@ -6,16 +8,18 @@ type PersonalitiesListProps = {
   }[];
 };
 
-export const PersonalitiesListClass = (props: PersonalitiesListProps) => {
-  return (
-    <div>
-      {props.names.map((name) => {
-        return (
-          <h2 key={name.id}>
-            {name.firstName} {name.lastName}
-          </h2>
-        );
-      })}
-    </div>
-  );
-};
+export default class PersonalitiesListClass extends Component<PersonalitiesListProps> {
+  render() {
+    return (
+      <div>
+        {this.props.names.map((name) => {
+          return (
+            <h2 key={name.id}>
+              {name.firstName} {name.lastName}
+            </h2>
+          );
+        })}
+      </div>
+    );
+  }
+}

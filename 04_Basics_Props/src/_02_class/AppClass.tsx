@@ -2,7 +2,7 @@ import { Component } from "react";
 import { GreetClass } from "./components/GreetClass";
 import PersonClass from "./components/PersonClass";
 import { HobbiesListClass } from "./components/HobbiesListClass";
-import { PersonalitiesListClass } from "./components/PersonalitiesListClass";
+import PersonalitiesListClass from "./components/PersonalitiesListClass";
 import "./../App.css";
 
 export default class AppClass extends Component {

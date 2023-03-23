@@ -1,4 +1,4 @@
-type PersonProps = {
+type PersonPropsType = {
   person: {
     firstName: string;
     lastName: string;
@@ -6,7 +6,7 @@ type PersonProps = {
   hobbies: string[];
 };
 
-export const Person = (props: PersonProps) => {
+export const Person = (props: PersonPropsType) => {
   const [one, two, three] = props.hobbies;
 
   return (
