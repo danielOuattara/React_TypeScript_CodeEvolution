@@ -3,8 +3,8 @@ import "./../App.css";
 import { ContainerClass } from "./components/ContainerClass";
 import { PersonClass } from "./components/PersonClass";
 import { InputClass } from "./components/InputClass";
-import { PersonalitiesListClass } from "./components/PersonalitiesListClass";
-import { PersonalitiesList2Class } from "./components/PersonalitiesList2Class";
+import PersonalitiesListClass from "./components/PersonalitiesListClass";
+import PersonalitiesList2Class from "./components/PersonalitiesList2Class";
 
 export default class AppClass extends Component {
   render() {

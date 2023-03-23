@@ -1,5 +1,3 @@
-import { PersonProps } from "./../propsTypes/PersonProps";
-
 // export const Person = (props: PersonProps) => {
 //   const { firstName, lastName } = props.person;
 //   const hobbies = props.hobbies;
@@ -19,11 +17,18 @@ import { PersonProps } from "./../propsTypes/PersonProps";
 // };
 
 //----------------------------------------------------------
+import { PersonProps } from "./../propsTypes/PersonProps";
 
-export const Person = ({hobbies, person: { firstName, lastName }}: PersonProps) => {
+export const Person = ({
+  person: { firstName, lastName },
+  hobbies,
+}: PersonProps) => {
   return (
     <div>
-      <h2> {firstName} {lastName} </h2>
+      <h2>
+        {" "}
+        {firstName} {lastName}{" "}
+      </h2>
       <br />
       <ul>
         {hobbies.map((hobby) => {
@@ -33,4 +38,3 @@ export const Person = ({hobbies, person: { firstName, lastName }}: PersonProps) 
     </div>
   );
 };
-

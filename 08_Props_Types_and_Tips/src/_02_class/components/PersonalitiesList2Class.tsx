@@ -5,7 +5,7 @@ type PersonalitiesListProps = {
   names: Name[];
 };
 
-export class PersonalitiesList2Class extends Component<PersonalitiesListProps> {
+export default class PersonalitiesList2Class extends Component<PersonalitiesListProps> {
   render() {
     return (
       <div>
