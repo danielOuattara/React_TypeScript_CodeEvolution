@@ -5,7 +5,7 @@ type AuthUser = {
   email: string;
 };
 
-export const User = () => {
+export function User() {
   const [user, setUser] = useState<AuthUser | null>(null);
 
   const handleLogin = () => {
@@ -29,6 +29,6 @@ export const User = () => {
       <button onClick={handleLogout}>Logout</button>
     </div>
   );
-};
+}
 
 // export default LoggedIn;

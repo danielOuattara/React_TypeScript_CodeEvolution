@@ -1,8 +1,70 @@
+// import { Component } from "react";
+
+// // interface AuthUser {
+// //   name: string;
+// //   email: string;
+// // }
+
+// //------------------------ OR
+
+// // type AuthUser = {
+// //   name: string;
+// //   email: string;
+// // };
+
+// export class UserClass extends Component {
+//   state = {
+//     user: {
+//       name: null,
+//       email: null,
+//     },
+//   };
+
+//   handleLogin = () => {
+//     this.setState((prevState: {}) => ({
+//       ...prevState,
+//       user: {
+//         name: "Daniel",
+//         email: "danil@mail.com",
+//       },
+//     }));
+//   };
+//   handleLogout = () =>
+//     this.setState(() => ({
+//       user: {
+//         name: null,
+//         email: null,
+//       },
+//     }));
+
+//   render() {
+//     console.log(this.state);
+//     return (
+//       <div>
+//         <p>Hello</p>
+//         <h2> User name: {this.state.user?.name}</h2>
+//         <h2> User email: {this.state.user?.email} </h2>
+
+//         {this.state.user?.name && <h2> User name: {this.state.user?.name}</h2>}
+
+//         {this.state.user?.email && (
+//           <h2> User email: {this.state.user?.email}</h2>
+//         )}
+
+//         <button onClick={this.handleLogin}>Login</button>
+//         <button onClick={this.handleLogout}>Logout</button>
+//       </div>
+//     );
+//   }
+// }
+
+//--------------------------------------------------------------
+
 import { Component } from "react";
 
 interface AuthUser {
-  name: string;
-  email: string;
+  name: string | null;
+  email: string | null;
 }
 
 //------------------------ OR
@@ -12,29 +74,23 @@ interface AuthUser {
 //   email: string;
 // };
 
-export class UserClass extends Component {
+export class UserClass extends Component<{}, AuthUser> {
   state = {
-    user: {
-      name: null,
-      email: null,
-    },
+    name: null,
+    email: null,
   };
 
   handleLogin = () => {
-    this.setState((prevState: {}) => ({
+    this.setState((prevState: AuthUser) => ({
       ...prevState,
-      user: {
-        name: "Daniel",
-        email: "danil@mail.com",
-      },
+      name: "Daniel",
+      email: "danil@mail.com",
     }));
   };
   handleLogout = () =>
     this.setState(() => ({
-      user: {
-        name: null,
-        email: null,
-      },
+      name: null,
+      email: null,
     }));
 
   render() {
@@ -42,14 +98,12 @@ export class UserClass extends Component {
     return (
       <div>
         <p>Hello</p>
-        <h2> User name: {this.state.user?.name}</h2>
-        <h2> User email: {this.state.user?.email} </h2>
+        <h2> User name: {this.state.name}</h2>
+        <h2> User email: {this.state.email} </h2>
 
-        {this.state.user?.name && <h2> User name: {this.state.user?.name}</h2>}
+        {this.state.name && <h2> User name: {this.state.name}</h2>}
 
-        {this.state.user?.email && (
-          <h2> User email: {this.state.user?.email}</h2>
-        )}
+        {this.state.email && <h2> User email: {this.state.email}</h2>}
 
         <button onClick={this.handleLogin}>Login</button>
         <button onClick={this.handleLogout}>Logout</button>
