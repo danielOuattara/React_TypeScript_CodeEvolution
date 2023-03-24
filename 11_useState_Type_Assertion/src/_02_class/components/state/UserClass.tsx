@@ -12,6 +12,16 @@ type AuthUserType = {
   email: string;
 };
 
+/* 
+
+  if you are sure that user values will be given just 
+  after component mounted, then tell TypeScript that 
+  empty object {} is asserted to be AuthUser 
+
+  In this case we do not need to use ? optional operator
+
+*/
+
 export class UserClass extends Component {
   state = {
     user: {} as AuthUserType,
@@ -22,7 +32,7 @@ export class UserClass extends Component {
       ...prevState,
       user: {
         name: "Daniel",
-        email: "danil@mail.com",
+        email: "daniel@mail.com",
       },
     }));
   };
@@ -39,14 +49,12 @@ export class UserClass extends Component {
     return (
       <div>
         <p>Hello</p>
-        <h2> User name: {this.state.user?.name}</h2>
-        <h2> User email: {this.state.user?.email} </h2>
+        <h2> User name: {this.state.user.name}</h2>
+        <h2> User email: {this.state.user.email} </h2>
 
-        {this.state.user?.name && <h2> User name: {this.state.user?.name}</h2>}
+        {this.state.user.name && <h2> User name: {this.state.user.name}</h2>}
 
-        {this.state.user?.email && (
-          <h2> User email: {this.state.user?.email}</h2>
-        )}
+        {this.state.user.email && <h2> User email: {this.state.user.email}</h2>}
 
         <button onClick={this.handleLogin}>Login</button>
         <button onClick={this.handleLogout}>Logout</button>
