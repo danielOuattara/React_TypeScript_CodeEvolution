@@ -13,6 +13,8 @@ export const User = () => {
   if you are sure that user values will be given just 
   after component mounted, then tell TypeScript that 
   empty object {} is asserted to be AuthUser 
+
+  In this case we do not need to use ? optional operator
   */
 
   const [user, setUser] = useState<AuthUser>({} as AuthUser);
