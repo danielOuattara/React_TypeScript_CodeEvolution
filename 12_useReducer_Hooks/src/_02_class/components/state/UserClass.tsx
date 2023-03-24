@@ -39,14 +39,12 @@ export class UserClass extends Component {
     return (
       <div>
         <p>Hello</p>
-        <h2> User name: {this.state.user?.name}</h2>
-        <h2> User email: {this.state.user?.email} </h2>
+        <h2> User name: {this.state.user.name}</h2>
+        <h2> User email: {this.state.user.email} </h2>
 
-        {this.state.user?.name && <h2> User name: {this.state.user?.name}</h2>}
+        {this.state.user.name && <h2> User name: {this.state.user.name}</h2>}
 
-        {this.state.user?.email && (
-          <h2> User email: {this.state.user?.email}</h2>
-        )}
+        {this.state.user.email && <h2> User email: {this.state.user.email}</h2>}
 
         <button onClick={this.handleLogin}>Login</button>
         <button onClick={this.handleLogout}>Logout</button>
