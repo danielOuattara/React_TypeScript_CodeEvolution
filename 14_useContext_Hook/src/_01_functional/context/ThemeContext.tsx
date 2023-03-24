@@ -1,3 +1,20 @@
+// import { createContext } from "react";
+// import { theme } from "./theme";
+
+// type ThemeContextProviderProps = {
+//   children: React.ReactNode;
+// };
+
+// export const ThemeContext = createContext(theme);
+
+// export const ThemeContextProvider = ({
+//   children,
+// }: ThemeContextProviderProps) => (
+//   <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+// );
+
+//------------------------------------------------------------------
+
 import { createContext } from "react";
 import { theme } from "./theme";
 
@@ -7,8 +24,8 @@ type ThemeContextProviderProps = {
 
 export const ThemeContext = createContext(theme);
 
-export const ThemeContextProvider = ({
-  children,
-}: ThemeContextProviderProps) => (
-  <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
-);
+export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
+  return (
+    <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
+  );
+}
