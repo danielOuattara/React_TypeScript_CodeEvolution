@@ -6,13 +6,13 @@ type PrivateProps = {
   component: React.ComponentType<ProfileProps>;
 };
 
-const Private = ({ isLoggedIn, component: Component }: PrivateProps) => {
+export default function Private({
+  isLoggedIn,
+  component: Component,
+}: PrivateProps) {
   if (isLoggedIn) {
     return <Component name="Daniel" />;
   } else {
     return <Login />;
   }
-  return <div>Private</div>;
-};
-
-export default Private;
+}

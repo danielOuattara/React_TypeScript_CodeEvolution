@@ -1,12 +1,11 @@
-import "./App.css";
-import { Login } from "./components/auth/Login";
+import "./../App.css";
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
-import Counter from "./components/class/Counter";
 
 function App() {
   return (
     <div className="App">
+      <h2>Functional Component</h2>
       <Private isLoggedIn={true} component={Profile} />
     </div>
   );
