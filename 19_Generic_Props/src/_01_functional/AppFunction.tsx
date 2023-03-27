@@ -1,10 +1,10 @@
-import "./App.css";
-
+import "./../App.css";
 import { List } from "./components/generics/List";
 
-function App() {
+export default function AppFunction() {
   return (
     <div className="App">
+      <h2>Functional Component</h2>
       <List
         items={["Daniel", "Julie", "Gaïa", "Amaya"]}
         onClick={(item) => console.log(item)}
@@ -14,14 +14,12 @@ function App() {
 
       <List
         items={[
-          { fName: "Daniel", lName: "Ouatara" },
-          { fName: "John", lName: "Doe" },
-          { fName: "Janna", lName: "Doe" },
+          { id: 1, fName: "Daniel", lName: "Ouattara" },
+          { id: 2, fName: "John", lName: "Doe" },
+          { id: 3, fName: "Janna", lName: "Doe" },
         ]}
         onClick={(item) => console.log(item)}
       />
     </div>
   );
 }
-
-export default App;
